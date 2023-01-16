@@ -1,0 +1,141 @@
+body {
+  background-color: #e6f8eb;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+main > div {
+  height: 300px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(115deg, red, purple, blue, yellow, green) 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.netfilx {
+  background-color: azure;
+}
+.netfilx > .container {
+  height: 180px;
+  width: 180px;
+  background-color: black;
+}
+.netfilx > .container > div {
+  height: 150px;
+  width: 30px;
+  border-left: 30px solid red;
+  border-right: 30px solid red;
+  position: relative;
+}
+.netfilx > .container > div::before {
+  content: "";
+  height: inherit;
+  width: 30px;
+  height: inherit;
+  background-color: red;
+  display: block;
+  transform: skew(21.25deg);
+  box-shadow: 0 0 30px black;
+}
+.youtube {
+  background-color: #fff;
+}
+.youtube > .container {
+  height: 150px;
+  width: 200px;
+  border-radius: 30px;
+  background-color: red;
+}
+.youtube > .container > .play-btn {
+  height: 0;
+  width: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 60px solid #fff;
+}
+.react {
+  background-color: black;
+}
+.react > .roll {
+  width: 100%;
+  height: 100%;
+}
+.react > .roll > .ball {
+  height: 2.5%;
+  width: 2.5%;
+  background-color: aqua;
+  border-radius: 50%;
+}
+.react > .roll > .ellipse {
+  height: 15%;
+  width: 5%;
+  border: 1px solid aqua;
+  border-radius: 50%;
+  position: absolute;
+}
+.react > .roll {
+  animation-name: roll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.react > .roll > .ellipse:nth-child(2) {
+  transform: rotate(30deg);
+}
+.react > .roll > .ellipse:nth-child(3) {
+  transform: rotate(-30deg);
+}
+.react > .roll > .ellipse:nth-child(4) {
+  transform: rotate(90deg);
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.google {
+  background-color: #fff;
+}
+.google > .container {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border-top: 40px solid #ea4335;
+  border-left: 40px solid #fbbc05;
+  border-bottom: 40px solid #34a853;
+  border-right: 40px solid #4285f4;
+  position: relative;
+}
+.google > .container::before {
+  content: "";
+  background-color: #4285f4;
+  height: 40px;
+  width: 40%;
+  position: absolute;
+  right: 0;
+}
+.google > .container::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  clip-path: polygon(100% 2%, 0% 100%, 100% 100%);
+  width: 98px;
+  height: 90px;
+  top: -35px;
+  right: -38px;
+}
